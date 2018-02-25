@@ -16,6 +16,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	background: transparent;
 }
 
+#mapDiv {
+height: 375px;
+width: 100%;
+}
+
 a {
 color:#4A0F0F;
 }

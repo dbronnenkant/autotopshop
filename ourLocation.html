@@ -10,7 +10,8 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="shortlink" href="http://www.autotopshop.com/" />
 	<!-- SEO -->
-	<meta name="description" content="Our services include convertible top repair, collision repair, auto glass repair, complete auto restorations services and much more." />
+	<meta name="description" content="Our services include convertible top repair, collision repair, auto glass repair, complete auto restorations services and much more."
+	/>
 	<meta name="keywords" content="collision repair, convertible top repair, auto glass repair, auto restoration services," />
 	<link rel="canonical" href="http://www.autotopshop.com/" />
 	<!-- /SEO -->
@@ -90,46 +91,39 @@
 					<div class="column-one">
 
 						<div class="blog-main">
-							<div class="blog-content">
-								<p>
-									<strong>Agostino’s Vinyl Top Service</strong> has been in operation since 1973. It is a family owned &#038; operated business
-									run by Vince and Debi Agostino. We are located in Mesa, Arizona on Highway 87, which is also Country Club Drive.
-									Our physical address is 600 S. Country Club Drive, Mesa, AZ 85210, which is on the corner of W. 6th Drive and Country
-									Club. We face Country Club Drive and our sign is on the building. </p>
-								<p>Agostino’s has a reputation of being honest and offering our customers top-notch service, loyalty, and very fair
-									prices. The Agostino team practices meticulous workmanship that on most occasions goes beyond the call of duty.
-									Vince has always loved the challenge and in many cases has taken on work that other companies have declined.</p>
-								<p>Vince Agostino has mastered the art of automobiles since 1953. His knowledge has expanded from not only Tops and
-									Upholstery, but to every aspect of a car. His employment with General Motors taught him much working on the assembly
-									line, has attended many technical schools whenever new products hit the market, worked in a body shop from fixing
-									transmissions to painting cars. Vince was a body shop manager for many years in New Jersey prior to settling in
-									Arizona in 1973. He has endless experience dealing with insurance companies and their adjustors, and has shared
-									his knowledge with family members working by his side. Vince has a reputation here in the valley that is admired
-									by many of his colleagues.</p>
-								<p>
-									<strong>Some of the work performed at Agostino’s is listed below:</strong>
-								</p>
-								<ul class="content">
-									<li class="content">Landau/Ragg Tops designed for hard top vehicles with vinyl or cloth fabric</li>
-									<li class="content">Convertible Tops ~ New and Replacement</li>
-									<li class="content">Convertible Glass ~ Repair and Replacement</li>
-									<li class="content">Upholstery Repair &#038; Replacement ~ seat tears or entire seats reupholstered</li>
-									<li class="content">Leather Conversions ~ from cloth to leather interiors</li>
-									<li class="content">Gold Packages ~ emblems on cars – 24 K gold plated</li>
-									<li class="content">Headliners ~ convertibles and hard top vehicles ~ new or replaced</li>
-									<li class="content">Trim Packages ~ chrome moldings, grills, wheel opening moldings, etc.</li>
-									<li class="content">Steering Wheel Laced Leather Covers</li>
-									<li class="content">Molded Carpet</li>
-									<li class="content">Window Tint</li>
-									<li class="content">Dent Repair</li>
-									<li class="content">Small Collision Repair</li>
-								</ul>
-							</div>
+							<div class="blog-content"></div>
+							<h2>Our Location</h2>
+							<div id="mapDiv"></div>
+							<script>
+								function initMap() {
+									var shop = { lat: 33.4038952, lng: -111.8401592 };
+									var map = new google.maps.Map(document.getElementById('mapDiv'), {
+										zoom: 15,
+										center: { lat: 33.405, lng: -111.8401592 }
+									});
+									var contentString = "<center><div><strong>Agostino's<br>Vinyl Top & Auto Repair</strong></div><br>600 S Country Club Dr<br>Mesa, AZ 85210</center>"
+									var infoWindow = new google.maps.InfoWindow({
+										content: contentString,
+										visible: true
+									});
+									var marker = new google.maps.Marker({
+										position: shop,
+										map: map,
+									});
+									marker.addListener('click', function () {
+										infoWindow.open(map, marker);
+									});
+									infoWindow.open(map, marker);
+								}
+							</script>
+							<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABuLZ-tV3kh_4U76Fz1SuPU_dcibtWbY0&callback=initMap">
+							</script>
 						</div>
-						<div class="page-main">
 
+						<div class="page-main">
 						</div>
 					</div>
+
 					<div class="column-two">
 						<ul class="category-bg">
 							<h2>Menu</h2>
